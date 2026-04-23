@@ -6,8 +6,9 @@ from aiogram.fsm.context import FSMContext
 import asyncio
 from datetime import datetime, timedelta
 import csv
+import os
 
-BOT_TOKEN = "8636208292:AAFbikyusM5qo9WVFKjE6rf8-Vv2YldO4_I"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
