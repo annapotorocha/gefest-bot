@@ -7,9 +7,13 @@ import asyncio
 from datetime import datetime, timedelta
 import csv
 import os
+import sys
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")
-print("BOT_TOKEN =", BOT_TOKEN)
+
+if not BOT_TOKEN:
+    print("❌ BOT_TOKEN is missing!")
+    sys.exit(1)
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
