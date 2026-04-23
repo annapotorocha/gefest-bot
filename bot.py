@@ -9,6 +9,7 @@ import csv
 import os
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")
+print("BOT_TOKEN =", BOT_TOKEN)
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
